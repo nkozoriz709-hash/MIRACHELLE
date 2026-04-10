@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Политика конфиденциальности | 𝑀𝐼𝑅𝐴𝐶𝐻𝐸𝐿𝐿𝐸</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Небольшие стили специально для этой страницы */
+        .privacy-container {
+            max-width: 900px;
+            margin: 120px auto 80px;
+            padding: 40px;
+            background: white;
+            border-radius: 48px;
+            box-shadow: 0 20px 35px -10px rgba(0,0,0,0.05);
+            border: 1px solid #F0EBE3;
+        }
+        .privacy-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 24px;
+            display: block;
+            margin: 0 auto;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .privacy-container h1 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            color: #1E1E1E;
+            text-align: center;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 40px;
+            color: #B28B6F;
+            text-decoration: none;
+            font-weight: 500;
+            transition: gap 0.3s;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 700px) {
+            .privacy-container {
+                margin: 100px 20px 60px;
+                padding: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Та же самая навигация, что и на главной -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">✦</span> 𝑀𝐼𝑅𝐴𝐶𝐻𝐸𝐿𝐿𝐸
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html#home" class="nav-item">Главная</a></li>
+                <li><a href="index.html#products" class="nav-item">Сыворотки</a></li>
+                <li><a href="index.html#about" class="nav-item">О нас</a></li>
+                <li><a href="index.html#reviews" class="nav-item">Отзывы</a></li>
+                <li><a href="#" id="cartIconBtn" class="nav-item cart-icon-btn">
+                    <i class="fas fa-shopping-bag"></i> <span id="cartCount">0</span>
+                </a></li>
+            </ul>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Контент страницы с документом -->
+    <div class="privacy-container">
+        <h1>Политика конфиденциальности</h1>
+        <!-- Здесь отображается ваша картинка-документ -->
+        <img src="https://i.ibb.co/1fMmnQb1/photo-2026-04-03-21-18-05.jpg" alt="Документ Политика конфиденциальности">
+        <div style="text-align: center;">
+            <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Вернуться на главную</a>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-icon">✦</span> 𝑀𝐼𝑅𝐴𝐶𝐻𝐸𝐿𝐿𝐸
+                    <p>Косметические сыворотки для сияющей и здоровой кожи.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="privacy.html">Декларация</a>
+                </div>
+                <div class="footer-social">
+                    <a href="https://t.me/order_101" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <i class="fab fa-telegram"></i>
+                    </a>
+                    <a href="mailto:image.stock1001@gmail.com" class="social-link">
+                        <i class="far fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">© 2026 𝑀𝐼𝑅𝐴𝐶𝐻𝐸𝐿𝐿𝐸 — минимализм в каждой капле</div>
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
+    <!-- Небольшой скрипт для мобильного меню и корзины -->
+    <script>
+        // Дублируем базовые функции из script.js для работы меню и корзины на этой странице
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        function updateCartUI() {
+            const cartCountSpan = document.getElementById('cartCount');
+            const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+            if (cartCountSpan) cartCountSpan.innerText = totalItems;
+        }
+        function saveCart() { localStorage.setItem('cart', JSON.stringify(cart)); }
+        window.addEventListener('load', () => { updateCartUI(); });
+        const mobileBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+        if (mobileBtn) { mobileBtn.addEventListener('click', () => { navLinks.classList.toggle('active'); }); }
+        document.querySelectorAll('.nav-links a').forEach(link => { link.addEventListener('click', () => { navLinks.classList.remove('active'); }); });
+        const cartIconBtn = document.getElementById('cartIconBtn');
+        if(cartIconBtn) cartIconBtn.addEventListener('click', (e) => { e.preventDefault(); alert('Корзина доступна на главной странице'); });
+    </script>
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=yes, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="theme-color" content="#FDFCF9">
+    <title>𝑀𝐼𝑅𝐴𝐶𝐻𝐸𝐿𝐿𝐸 | Сыворотки для сияющей кожи</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Анимационная навигация -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">✦</span> 𝑀𝐼𝑅𝐴𝐶𝐻𝐸𝐿𝐿𝐸
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-item">Главная</a></li>
+                <li><a href="#products" class="nav-item">Сыворотки</a></li>
+                <li><a href="#about" class="nav-item">О нас</a></li>
+                <li><a href="#reviews" class="nav-item">Отзывы</a></li>
+                <li><a href="#" id="cartIconBtn" class="nav-item cart-icon-btn">
+                    <i class="fas fa-shopping-bag"></i> <span id="cartCount">0</span>
+                </a></li>
+            </ul>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Переключатель валют -->
+    <div class="currency-switcher">
+        <button class="currency-btn active" data-currency="rub">🇷🇺 RUB</button>
+        <button class="currency-btn" data-currency="byn">🇧🇾 BYN</button>
+    </div>
+
+    <!-- Hero секция -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <span class="hero-tagline">чистая эстетика</span>
+            <h1 class="hero-title">Забота которую <br>чувствуешь</h1>
+            <p class="hero-desc">Две сыворотки, созданные для пробуждения естественной красоты. Минимализм, эффективность, любовь к себе.</p>
+            <a href="#products" class="btn-primary">Исследовать коллекцию <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="hero-bg-shape"></div>
+    </section>
+
+    <!-- Продукты -->
+    <section id="products" class="products-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">чистые формулы</span>
+                <h2>Наши сыворотки</h2>
+                <p>Только 2 лимитированных концентрата, в каждом — сила природы и инноваций.</p>
+            </div>
+            <div class="products-grid" id="productsGrid"></div>
+        </div>
+    </section>
+
+    <!-- Модальное окно деталей продукта -->
+    <div id="productModal" class="product-modal">
+        <div class="product-modal-content">
+            <div class="modal-header">
+                <h3 id="modalProductName"></h3>
+                <span class="close-modal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img id="modalProductImage" src="" alt="Сыворотка">
+                </div>
+                <div class="modal-info">
+                    <p class="modal-description" id="modalProductDescription"></p>
+                    <div class="modal-ingredients">
+                        <h4><i class="fas fa-flask"></i> Состав</h4>
+                        <p id="modalProductIngredients"></p>
+                    </div>
+                    <div class="modal-benefits">
+                        <h4><i class="fas fa-star"></i> Ключевые преимущества</h4>
+                        <ul id="modalProductBenefits"></ul>
+                    </div>
+                    <div class="modal-price">
+                        <div>
+                            <span class="modal-price-rub" id="modalProductPriceRub"></span>
+                            <span class="modal-price-byn" id="modalProductPriceByn"></span>
+                        </div>
+                        <button id="modalAddToCart" class="btn-primary">Добавить в корзину</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- О нас -->
+    <section id="about" class="about-section">
+        <div class="container about-container">
+            <div class="about-img">
+                <div class="img-placeholder">
+                    <img src="https://i.ibb.co/BV3gxt14/C458-D2-B2-92-DF-4-DDF-96-F8-AC521-D5-EA519.png" alt="О нас">
+                </div>
+            </div>
+            <div class="about-text">
+                <h2>Мы за качество!</h2>
+                <p>Основатель бренда по образованию врач, поэтому нам важно, чтобы составы наших продуктов были максимально эффективны и безопасны. Вся продукция прошла необходимые испытания и исследования, имеет соответствующие документы качества и соответствия, активы поставляются из Европы, Израиля, Южный Кореи и имеют доказанную эффективность!</p>
+                <div class="about-stats">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Отзывы (только просмотр, без добавления) -->
+    <section id="reviews" class="reviews-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">от сердца к сердцу</span>
+                <h2>Реальные отзывы</h2>
+                <p>Что говорят наши клиенты о магии сывороток LUMINA.</p>
+            </div>
+            <div class="reviews-grid" id="reviewsGrid"></div>
+        </div>
+    </section>
+
+ 
+
+    <!-- Корзина (модальное окно) -->
+    <div id="cartModal" class="cart-modal">
+        <div class="cart-modal-content">
+            <div class="cart-header">
+                <h3><i class="fas fa-shopping-bag"></i> Ваша корзина</h3>
+                <span id="closeCart" class="close-cart">&times;</span>
+            </div>
+            <div id="cartItemsList" class="cart-items"></div>
+            <div class="cart-total">
+                <span>Итого (₽):</span>
+                <span id="cartTotalRub">0 ₽</span>
+            </div>
+            <div class="cart-total" style="margin-top: 8px;">
+                <span>Итого (Br):</span>
+                <span id="cartTotalByn">0 Br</span>
+            </div>
+            <button id="checkoutBtn" class="btn-primary full-width" style="margin-top: 20px;">
+                <i class="fab fa-telegram"></i> Оформить заказ в Telegram
+            </button>
+            <p style="text-align: center; margin-top: 16px; font-size: 0.75rem; color: #8B7A6B;">
+                После нажатия откроется Telegram с готовым сообщением
+            </p>
+        </div>
+    </div>
+
+    <!-- Модальное окно для просмотра видео -->
+    <div id="videoModal" class="video-modal">
+        <div class="video-modal-content">
+            <span class="close-video-modal">&times;</span>
+            <div class="video-container">
+                <iframe id="videoPlayer" src="" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <h3 id="videoModalTitle"></h3>
+            <p id="videoModalText"></p>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-icon">✦</span> 𝑀𝐼𝑅𝐴𝐶𝐻𝐸𝐿𝐿𝐸
+                    <p>Косметические сыворотки для сияющей и здоровой кожи.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="privacy.html">Декларация</a>
+                </div>
+                <div class="footer-social">
+                    <a href="https://t.me/order_101" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <i class="fab fa-telegram"></i>
+                    </a>
+                    <a href="mailto:image.stock1001@gmail.com" class="social-link">
+                        <i class="far fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">© 2026 𝑀𝐼𝑅𝐴𝐶𝐻𝐸𝐿𝐿𝐸 — минимализм в каждой капле</div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

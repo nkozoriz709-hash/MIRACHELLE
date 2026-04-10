@@ -1,0 +1,57 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Светоносная сыворотка",
+      "shortDesc": "Витамин C + феруловая кислота, осветление и упругость",
+      "description": "Интенсивный осветляющий концентрат для сияющей и ровной кожи",
+      "price": 4890,
+      "image": "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=600&h=600&fit=crop",
+      "ingredients": "Aqua (Water), Ascorbic Acid (Vitamin C), Ferulic Acid, Hyaluronic Acid, Glycerin, Tocopherol (Vitamin E), Citrus Aurantium Dulcis (Orange) Peel Oil, Sodium Hyaluronate, Xanthan Gum, Potassium Sorbate, Citric Acid.",
+      "benefits": [
+        "Мощная антиоксидантная защита",
+        "Осветляет пигментные пятна и выравнивает тон",
+        "Стимулирует выработку коллагена",
+        "Увлажняет и придает упругость"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Глубокое питание",
+      "shortDesc": "Гиалуроновая кислота + сквалан, интенсивное увлажнение",
+      "description": "Восстанавливающая сыворотка для интенсивного увлажнения и защиты",
+      "price": 5290,
+      "image": "https://images.unsplash.com/photo-1617897903246-719242758050?w=600&h=600&fit=crop",
+      "ingredients": "Aqua (Water), Squalane, Glycerin, Sodium Hyaluronate, Ceramide NP, Niacinamide, Panthenol, Butyrospermum Parkii (Shea) Butter, Tocopherol (Vitamin E), Lavandula Angustifolia (Lavender) Oil, Caprylyl Glycol, Xanthan Gum.",
+      "benefits": [
+        "Интенсивное увлажнение на 72 часа",
+        "Восстанавливает защитный барьер кожи",
+        "Смягчает и успокаивает раздражения",
+        "Придает здоровое сияние и эластичность"
+      ]
+    }
+  ],
+  "reviews": [
+    {
+      "id": 1,
+      "name": "Алиса",
+      "text": "Кожа преобразилась после Светоносной сыворотки! Сияние невероятное, тон выровнялся уже через неделю.",
+      "imgUrl": "",
+      "videoUrl": ""
+    },
+    {
+      "id": 2,
+      "name": "Мария К.",
+      "text": "Питательная сыворотка — спасение для сухой кожи. Текстура нежная, аромат расслабляет. Результат потрясающий!",
+      "imgUrl": "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=300&h=200&fit=crop",
+      "videoUrl": ""
+    },
+    {
+      "id": 3,
+      "name": "Екатерина",
+      "text": "Лучшие сыворотки, которые я пробовала! Светоносная подарила коже сияние, а питательная спасла зимой от шелушений.",
+      "imgUrl": "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=300&h=200&fit=crop",
+      "videoUrl": ""
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "lumina-shop",
+  "version": "1.0.0",
+  "description": "Косметический магазин с админ-панелью",
+  "scripts": {
+    "server": "json-server --watch db.json --port 3000",
+    "dev": "json-server --watch db.json --port 3000 --host 0.0.0.0"
+  },
+  "main": "admin.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "json-server": "^1.0.0-beta.15"
+  }
+}
